@@ -62,10 +62,11 @@ function App() {
               })
             }
           </div>
-          <div className='cart'>
+          <div><div className='cart'>
             <button>Valider mon panier</button>
             <p>Votre panier est vide</p>
-          </div>
+          </div></div>
+
         </div>
       </div>
     </div >)

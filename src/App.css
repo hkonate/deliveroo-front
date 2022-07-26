@@ -16,8 +16,8 @@ h4 {
   color: #2e3333;
   font-size: 22px;
   line-height: 29px;
-  font-weight: 400;
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 
 /* Header */
@@ -121,7 +121,6 @@ header img {
 .cart {
   width: 350px;
   background-color: white;
-  height: 191px;
   flex-shrink: 0;
   border-radius: 4px;
   padding: 10px 10px 0 10px;
@@ -133,14 +132,14 @@ header img {
   position: sticky;
   top: 30px;
 }
-.cart > p {
+.cart p {
   color: #868a8a;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   padding: 3rem 0;
 }
 
-.cart > button {
+.cart button {
   border: none;
   cursor: not-allowed;
   border-radius: 4px;
