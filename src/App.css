@@ -81,7 +81,7 @@ header img {
   max-width: 400px;
   padding: 15px;
   margin-bottom: 26px;
-  width: 50%;
+  width: calc(50% - 20px);
   cursor: pointer;
   border-radius: 5px;
   justify-content: space-between;
