@@ -86,10 +86,15 @@ header img {
   border-radius: 5px;
   justify-content: space-between;
 }
-
-.menu-item {
+.menu > div:first-child .menu-item {
+  display: flex;
+}
+.menu > div:not(div:nth-child(1)) > .menu-item {
   display: flex;
   flex-wrap: wrap;
+}
+.menu {
+  margin-right: 30px;
 }
 .meal-descrip > p {
   font-size: 0.9rem;
@@ -208,6 +213,47 @@ header img {
   color: black;
   font-size: 18px;
 }
+
+/* CART FLOAT */
+.car-float {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  display: none;
+}
+.car-float > button {
+  width: 100%;
+  height: 56px;
+  font-size: 13px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.car-float > span {
+  height: 30px;
+  width: 30px;
+  color: white;
+  text-align: center;
+  padding-top: 6px;
+  position: absolute;
+  left: 30px;
+  top: 24px;
+  font-size: 13px;
+}
+.car-float > div {
+  color: white;
+  width: 100px;
+  position: absolute;
+  right: 30px;
+  top: 29px;
+  text-align: right;
+}
+
 /* HOVER */
 .meal:hover {
   box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
@@ -215,4 +261,40 @@ header img {
 .dishes > p:first-child:hover,
 .dishes > :nth-child(3):hover {
   cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1106px) {
+  .menu > div:first-child .menu-item {
+    display: block;
+  }
+  .menu-item {
+    display: block;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .meal {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 869px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .descrip img {
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+  }
+}
+@media (max-width: 752px) {
+  .cart {
+    display: none;
+  }
+  .car-float {
+    display: flex;
+  }
 }

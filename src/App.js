@@ -20,6 +20,11 @@ function App() {
     <span>En cours de chargement... </span>
   ) : (
     <div>
+      <div className='car-float'>
+        <span style={{ "background-color": order.length > 0 ? "#36054f" : "none" }}>{order.length > 0 && <span>{order.reduce((acc, cur) => acc + cur.count, 0)}</span>}</span>
+        <button style={{ "background-color": order.length > 0 ? "#822774" : "#CDCDCD" }}>Valider le panier</button>
+        <div>{order.length > 0 && (order.reduce((acc, cur) => acc + cur.price * cur.count, 0) + 2.50).toFixed(2) + " €"}</div>
+      </div>
       <header>
         <div className='underline'><div className='container'><img src="/images/logo-teal.svg" alt="logo" /></div></div>
 
